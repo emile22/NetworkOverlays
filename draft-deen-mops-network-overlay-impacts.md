@@ -183,6 +183,10 @@ Routing changes which cause connections between video applications and the infra
 
 A common issue in video delivery is locating where along the delivery path the video transport is encountering problems.   Often such problems are more complex than the connection not working at but instead involve identifying bottleneck, lost packets, congestion issues.   When the routing changes from what is expected or visible to support tools it becomes an operational trouble spot for users and platform suport to location and determine the source of the problems.
 
+### CDN interconnection
+
+In a CDN interconnection When 2 CDN domains have to localize a point of failure, they first determine the delivery path and a point of observation where to do measurement. Then they proceed by dichotomy to determine the domain where the point of failure is. The issue with overlay networking is the Following : CDNs use their request routing information to determine the delivery path and the point of observation where to do the measurement, as their delivery path is overwritten by the re-routing of the overlay networking, the flow can't be observed at the observation point.
+
 ### CDN Edge Cache Selection due to Routing
 
 A significant, and often overlooked problm is the addition of network latency compared to edge CDN caches or access network peering connections.  Routing changes which cause bypassing edge CDN caches and instead choosing less optimal caches
